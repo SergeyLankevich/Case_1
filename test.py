@@ -8,6 +8,7 @@ turtle.fd(100)
 turtle.right(90)
 turtle.fd(100)
 turtle.fd(100)
-input('Press ENTER to exit')
 
-PRINT('WRGWERHETJHWETJHEST')
+print('Test of connection with github from my home')
+
+input('Press ENTER to exit')
