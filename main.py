@@ -94,7 +94,7 @@ def additional_figure_7():
 
     """
 
-def picture_1(x = 0, y = 0):
+def house(x = 0, y = 0):
 
     #house
     rectangle(200, 200, '#E4A700', x, y)
@@ -116,7 +116,7 @@ def picture_1(x = 0, y = 0):
 def picture_2():
     """
     #TODO: Painting the first picture using functions above: Ilya
-    Keyword argument: 
+    Keyword argument:
 
     """
 def picture_3():
@@ -178,6 +178,6 @@ def picture_9():
 
 ###############################################################################################
 
-picture_1()
+house()
 
 input('Press ENTER to exit')
