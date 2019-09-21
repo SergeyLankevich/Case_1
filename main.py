@@ -174,10 +174,6 @@ def sun(x = 0, y = 0):
 
 
 def tree(x = 0 , y = 0):
-    turtle.up()
-    turtle.setposition(x, y)
-    turtle.setheading(0)
-    turtle.down()
 
     rectangle(30, 150, '#502400', x, y)
     rectangle(200, 175, '#006500', x - 85, y + 150)
@@ -192,13 +188,35 @@ def tree(x = 0 , y = 0):
     y - y coordinate
     """
 
-def picture_4():
-    """
-    #TODO: Painting the first picture using functions above: Ilya
-    Keyword argument: 
+def flag(x = 0, y = 0):
+
+    rectangle(5, 175, '#502400', x, y)
+    rectangle(20, 20, '#A50021', x + 5, y + 155)
+    rectangle(20, 20, '#A50021', x + 5, y + 125)
+    rectangle(30, 20, '#A50021', x + 35, y + 155)
+    rectangle(30, 20, '#A50021', x + 35, y + 125)
+    triangle_1(20, 90, '#A50021', x + 65, y + 175)
+    triangle_1(20, 0, '#A50021', x + 65, y + 125)
 
     """
+    Done: Ilya
+    Keyword arguments:
+    x - x coordinate
+    y - y coordinate
+    """
 
+def ilya(x = 0, y = 0):
+    house(x - 100, y)
+    sun(x + 225, y+ 300)
+    tree(x - 400, y)
+    flag(x - 225, y)
+
+    """
+    Done: Ilya
+    Keyword arguments:
+    x - x coordinate
+    y - y coordinate
+    """
 
 def picture_5():
     """
@@ -245,8 +263,7 @@ def picture_9():
 ###############################################################################################
 
 turtle.speed(0)
-house(-100, -100)
-sun(250, 200)
-tree(-400, -100)
+ilya()
+
 
 input('Press ENTER to exit')
