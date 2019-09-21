@@ -16,6 +16,21 @@ def tri( edge, turn, color, x = 0, y = 0):          #edge - lenght of cathet
     turtle.fd(edge)
     turtle.end_fill()
 
+def sqr( edgex, edgey, color, x = 0, y = 0):        #edgex - lenght x
+    turtle.up()                                     #edgey - lenght y
+    turtle.setposition(x, y)                        #turn - turn of triangle at clockwise
+    turtle.setheading(0)                            #color - fill color of triangle
+    turtle.down()                                   #x - x coordinate of start
+    turtle.color(color)                             #y - y coordinate of start
+    turtle.begin_fill()
+    turtle.fd(edgex)
+    turtle.rt(90)
+    turtle.fd(edgey)
+    turtle.rt(90)
+    turtle.fd(edgex)
+    turtle.rt(90)
+    turtle.fd(edgey)
+    turtle.end_fill()
 
 turtle.speed(10)
 tri( 100, 0, '#D40000')
@@ -34,5 +49,6 @@ tri( 25, 135, '#00A300', -180 + 280 , -200)
 tri( 25, 135, '#00A300', -180 + 320 , -200)
 tri( 25, 135, '#00A300', -180 + 360 , -200)
 
+sqr(200, 100, '#E4A700', 150)
 
 input()
