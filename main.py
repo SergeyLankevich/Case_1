@@ -2,11 +2,11 @@ import turtle
 import math
 
 
-def triangle_1( edge, turn, color, x = 0, y = 0):          #edge - lenght of cathet
-    turtle.up()                                            #turn - turn of triangle at clockwise
-    turtle.setposition(x, y)                               #color - fill color of triangle
-    turtle.setheading(0)                                   #x - x coordinate of start
-    turtle.down()                                          #y - y coordinate of start
+def triangle_1( edge, turn, color, x = 0, y = 0):
+    turtle.up()
+    turtle.setposition(x, y)
+    turtle.setheading(0)
+    turtle.down()
     turtle.color(color)
     turtle.right(turn)
     turtle.begin_fill()
@@ -17,13 +17,22 @@ def triangle_1( edge, turn, color, x = 0, y = 0):          #edge - lenght of cat
     turtle.fd(edge)
     turtle.end_fill()
 
+    """
+    Keyword argument: 
+    edge - lenght of cathet
+    turn - turn of triangle at clockwise
+    color - fill color of triangle
+    x - x coordinate of start
+    y - y coordinate of start
+    """
 
-def rectangle( edgex, edgey, color, x = 0, y = 0):         #edgex - lenght x
-    turtle.up()                                            #edgey - lenght y
-    turtle.setposition(x, y)                               #turn - turn of triangle at clockwise
-    turtle.setheading(0)                                   #color - fill color of triangle
-    turtle.down()                                          #x - x coordinate of start
-    turtle.color(color)                                    #y - y coordinate of start
+
+def rectangle( edgex, edgey, color, x = 0, y = 0):
+    turtle.up()
+    turtle.setposition(x, y)
+    turtle.setheading(0)
+    turtle.down()
+    turtle.color(color)
     turtle.begin_fill()
     turtle.fd(edgex)
     turtle.lt(90)
@@ -33,7 +42,16 @@ def rectangle( edgex, edgey, color, x = 0, y = 0):         #edgex - lenght x
     turtle.lt(90)
     turtle.fd(edgey)
     turtle.end_fill()
-    #Keyword argument:
+
+    """
+    Keyword argument: 
+    edgex - lenght x
+    edgey - lenght y
+    turn - turn of triangle at clockwise
+    color - fill color of triangle
+    x - x coordinate of start
+    y - y coordinate of start
+    """
 
 
 
@@ -109,16 +127,18 @@ def house(x = 0, y = 0):
     rectangle(50, 6, '#2F1400', x + 75, y + 97)
     rectangle(6, 50, '#2F1400', x + 97, y + 75)
 
-
-
-
-
-def picture_2():
     """
-    #TODO: Painting the first picture using functions above: Ilya
-    Keyword argument:
-
+    Keyword argument: 
+    x - x coordinate
+    y - y coordinate
     """
+
+
+
+def sun(x = 0, y = 0):
+
+
+
 def picture_3():
     """
     #TODO: Painting the first picture using functions above: Ilya
