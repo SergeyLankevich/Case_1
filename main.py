@@ -1,5 +1,5 @@
-import turtle
-import math
+from turtle import *
+from math import sqrt
 
 
 def triangle_1( edge, turn, color, x = 0, y = 0):
@@ -58,12 +58,38 @@ def rectangle( edgex, edgey, color, x = 0, y = 0):
 
 
 
-def additional_figure_1():
+def parallelogram(x, y, side_a, side_b, angle_a, color, direction, turn):
     """
-    #TODO: Paint and additional figure if needed: Ilya
+    Function: Painting any quadrangle.
     Keyword argument: 
+    :param x: upper left corner coordinate x
+    :param y: upper left corner coordinate y
+    :param side_a: length of the first side
+    :param side_b: length of the second side
+    :param angle_a: Any angle in the quadrangle
+    :param color: filling color
+    :param direction: the direction quadrangle is facing towards (west/east)
+    :param: turn of the triangle (clockwise)
+    :return: None
 
     """
+    up()
+    setpos(x, y)
+    down()
+    begin_fill()
+    fillcolor(color)
+    left(turn)
+    fd(side_a)
+    left((180 - angle_a) * direction)
+    fd(side_b)
+    left((angle_a) * direction)
+    fd(side_a)
+    left((180 - angle_a) * direction)
+    fd(side_b)
+    left((angle_a - 90) * direction)
+    end_fill()
+    
+
 
 
 def additional_figure_2():
@@ -218,12 +244,62 @@ def ilya(x = 0, y = 0):
     y - y coordinate
     """
 
-def picture_5():
+def flower():
     """
-    #TODO: Painting the first picture using functions above: Sergey
+    Function: painting a flower using only parallelogram function.
     Keyword argument: 
+    :param x: upper left corner coordinate x
+    :param y: upper left corner coordinate y
+    :param side_a: length of the first side
+    :param side_b: length of the second side
+    :param angle_a: Any angle in the quadrangle
+    :param color: filling color
+    :param direction: the direction quadrangle is facing towards (west/east)
+    :param: turn of the triangle (clockwise)
+    :return: None
 
     """
+    parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 90)
+    parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, 90)
+    parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, 0)
+    parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 90)
+    parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 0)
+    parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 0)  
+    parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, -90)
+    parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, 180)
+    parallelogram(0, 75, 100, 100, 90, '#FF3333', 1, 45)
+    parallelogram(-75, 0, 100, 100, 90, '#FF3333', 1, 180)
+    parallelogram(75, 0, 100, 100, 90, '#FF3333', 1, -90)
+    parallelogram(0, -75, 100, 100, 90, '#FF3333', 1, 0)
+    parallelogram(100 / sqrt(2), 100 / sqrt(2), 75, 75, 90, '#C300D1', 1, -135)
+    parallelogram(-100 / sqrt(2), 100 / sqrt(2), 75, 75, 90, '#C300D1', 1, 180)
+    parallelogram(100 / sqrt(2), -100 / sqrt(2), 75, 75, 90, '#C300D1', 1, -90)
+    parallelogram(-100 / sqrt(2), -100 / sqrt(2), 75, 75, 90, '#C300D1', 1, 0)
+    parallelogram(100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#FF0000', 1, 0)
+    parallelogram(100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#FF0000', -1, 90)
+    parallelogram(100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#E20000', 1, 180)
+    parallelogram(100 / sqrt(2) + 75, 100 / sqrt(2), 75, 100, 135, '#E20000', -1, 180)
+    parallelogram(100 / sqrt(2) + 75, 100 / sqrt(2), 75, 100, 135, '#CC0000', -1, 180)
+    parallelogram(100 / sqrt(2) + 75, 100 / sqrt(2), 75, 100, 135, '#CC0000', 1, -90)
+    parallelogram(100 / sqrt(2) + 75, -100 / sqrt(2), 75, 100, 135, '#CC0000', 1, 90)
+    parallelogram(100 / sqrt(2) + 75, -100 / sqrt(2), 75, 100, 135, '#CC0000', -1, 90)
+    parallelogram(100 / sqrt(2) + 75, -100 / sqrt(2), 75, 100, 135, '#CC0000', 1, 180)
+    parallelogram(100 / sqrt(2) + 75, -100 / sqrt(2), 75, 100, 135, '#E20000', 1, 180)
+    parallelogram(100 / sqrt(2), -100 / sqrt(2) - 75, 75, 100, 135, '#E20000', -1, 90)
+    parallelogram(100 / sqrt(2), -100 / sqrt(2) - 75, 75, 100, 135, '#FF0000', 1, 180)
+    parallelogram(100 / sqrt(2), -100 / sqrt(2) - 75, 75, 100, 135, '#FF0000', -1, 90)
+    parallelogram(-100 / sqrt(2), -100 / sqrt(2) - 75, 75, 100, 135, '#FF6666', 1, 180)
+    parallelogram(-100 / sqrt(2), -100 / sqrt(2) - 75, 75, 100, 135, '#FF6666', -1, 180)
+    parallelogram(-100 / sqrt(2), -100 / sqrt(2) - 75, 75, 100, 135, '#FF6666', 1, -90)
+    parallelogram(-100 / sqrt(2) - 75, -100 / sqrt(2), 75, 100, 135, '#FF9999', -1, 90)
+    parallelogram(-100 / sqrt(2) - 75, -100 / sqrt(2), 75, 100, 135, '#FFCCCC', -1, 180)
+    parallelogram(-100 / sqrt(2) - 75, -100 / sqrt(2), 75, 100, 135, '#FFCCCC', 1, -90)
+    parallelogram(-100 / sqrt(2) - 75, 100 / sqrt(2), 75, 100, 135, '#FFCCCC', 1, 90)
+    parallelogram(-100 / sqrt(2) - 75, 100 / sqrt(2), 75, 100, 135, '#FFCCCC', -1, 90)
+    parallelogram(-100 / sqrt(2) - 75, 100 / sqrt(2), 75, 100, 135, '#FF9999', 1, 180)
+    parallelogram(-100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#FF9999', -1, 180)
+    parallelogram(-100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#FF6666', 1, 180)
+    parallelogram(-100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#FF6666', -1, 90)
 
 
 def picture_6():
