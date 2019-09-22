@@ -3,19 +3,19 @@ from math import sqrt
 
 
 def triangle_1( edge, turn, color, x = 0, y = 0):
-    turtle.up()
-    turtle.setposition(x, y)
-    turtle.setheading(0)
-    turtle.down()
-    turtle.color(color)
-    turtle.right(turn)
-    turtle.begin_fill()
-    turtle.fd(edge)
-    turtle.left(135)
-    turtle.fd(edge * math.sqrt(2))
-    turtle.left(135)
-    turtle.fd(edge)
-    turtle.end_fill()
+    up()
+    setposition(x, y)
+    setheading(0)
+    down()
+    color(color)
+    right(turn)
+    begin_fill()
+    fd(edge)
+    left(135)
+    fd(edge * math.sqrt(2))
+    left(135)
+    fd(edge)
+    end_fill()
 
     """
     Done: Ilya
@@ -29,20 +29,20 @@ def triangle_1( edge, turn, color, x = 0, y = 0):
 
 
 def rectangle( edgex, edgey, color, x = 0, y = 0):
-    turtle.up()
-    turtle.setposition(x, y)
-    turtle.setheading(0)
-    turtle.down()
-    turtle.color(color)
-    turtle.begin_fill()
-    turtle.fd(edgex)
-    turtle.lt(90)
-    turtle.fd(edgey)
-    turtle.lt(90)
-    turtle.fd(edgex)
-    turtle.lt(90)
-    turtle.fd(edgey)
-    turtle.end_fill()
+    up()
+    setposition(x, y)
+    setheading(0)
+    down()
+    color(color)
+    begin_fill()
+    fd(edgex)
+    lt(90)
+    fd(edgey)
+    lt(90)
+    fd(edgex)
+    lt(90)
+    fd(edgey)
+    end_fill()
 
     """
     Done: Ilya
@@ -165,29 +165,29 @@ def house(x = 0, y = 0):
 
 
 def sun(x = 0, y = 0):
-    turtle.up()
-    turtle.setposition(x, y)
-    turtle.setheading(0)
-    turtle.down()
-    turtle.color('#FFDB00')
+    up()
+    setposition(x, y)
+    setheading(0)
+    down()
+    color('#FFDB00')
 
-    turtle.begin_fill()
-    turtle.circle(25)
-    turtle.end_fill()
+    begin_fill()
+    circle(25)
+    end_fill()
 
     angle = 5.74
-    turtle.up()
-    turtle.setposition(x, y + 30)
-    turtle.setheading(0)
-    turtle.down()
+    up()
+    setposition(x, y + 30)
+    setheading(0)
+    down()
 
-    turtle.begin_fill()
-    turtle.fd(50)
+    begin_fill()
+    fd(50)
     for i in range(36):
-        turtle.rt(175)
-        turtle.fd(100)
+        rt(175)
+        fd(100)
 
-    turtle.end_fill()
+    end_fill()
 
 
 
@@ -338,7 +338,7 @@ def picture_9():
 
 ###############################################################################################
 
-turtle.speed(0)
+speed(0)
 ilya()
 
 
