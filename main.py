@@ -2,17 +2,17 @@ from turtle import *
 from math import sqrt
 
 
-def triangle_1( edge, turn, color, x = 0, y = 0):
+def triangle_1( edge, turn, col, x = 0, y = 0):
     up()
     setposition(x, y)
     setheading(0)
     down()
-    color(color)
+    color(col)
     right(turn)
     begin_fill()
     fd(edge)
     left(135)
-    fd(edge * math.sqrt(2))
+    fd(edge * sqrt(2))
     left(135)
     fd(edge)
     end_fill()
@@ -22,18 +22,18 @@ def triangle_1( edge, turn, color, x = 0, y = 0):
     Keyword arguments: 
     edge - lenght of cathet
     turn - turn of triangle at clockwise
-    color - fill color of triangle
+    col - fill color of triangle
     x - x coordinate of start
     y - y coordinate of start
     """
 
 
-def rectangle( edgex, edgey, color, x = 0, y = 0):
+def rectangle( edgex, edgey, col, x = 0, y = 0):
     up()
     setposition(x, y)
     setheading(0)
     down()
-    color(color)
+    color(col)
     begin_fill()
     fd(edgex)
     lt(90)
@@ -50,7 +50,7 @@ def rectangle( edgex, edgey, color, x = 0, y = 0):
     edgex - lenght x
     edgey - lenght y
     turn - turn of triangle at clockwise
-    color - fill color of triangle
+    col - fill color of triangle
     x - x coordinate of start
     y - y coordinate of start
     """
@@ -231,10 +231,15 @@ def flag(x = 0, y = 0):
     y - y coordinate
     """
 
+def grass(x = 0, y = 0):
+    for i in range(20):
+        triangle_1(25, 135, '#006500', x + i * 25 * sqrt(2), y)
+
 def ilya(x = 0, y = 0):
     house(x - 100, y)
     sun(x + 225, y+ 300)
     tree(x - 400, y)
+    grass(x - 450, y + 15)
     flag(x - 225, y)
 
     """
