@@ -1,8 +1,13 @@
+# Case-study #1
+# Developers:   Malakhov I. (60%),
+#               Lankevich S. (40%)
+
+
 from turtle import *
 from math import sqrt
 
 
-def triangle_1( edge, turn, col, x = 0, y = 0):
+def triangle_1(edge, turn, col, x=0, y=0):
     up()
     setposition(x, y)
     setheading(0)
@@ -28,7 +33,7 @@ def triangle_1( edge, turn, col, x = 0, y = 0):
     """
 
 
-def rectangle( edgex, edgey, col, x = 0, y = 0):
+def rectangle(edgex, edgey, col, x=0, y=0):
     up()
     setposition(x, y)
     setheading(0)
@@ -56,12 +61,10 @@ def rectangle( edgex, edgey, col, x = 0, y = 0):
     """
 
 
-
-
 def parallelogram(x, y, side_a, side_b, angle_a, color, direction, turn):
     """
     Function: Painting any quadrangle.
-    Keyword argument: 
+    Keyword argument:
     :param x: upper left corner coordinate x
     :param y: upper left corner coordinate y
     :param side_a: length of the first side
@@ -88,65 +91,14 @@ def parallelogram(x, y, side_a, side_b, angle_a, color, direction, turn):
     fd(side_b)
     left((angle_a - 90) * direction)
     end_fill()
-    
 
 
-
-def additional_figure_2():
-    """
-    #TODO: Paint and additional figure if needed: Ilya
-    Keyword argument: 
-
-    """
-
-
-
-def additional_figure_3():
-    """
-    #TODO: Paint and additional figure if needed: Ilya
-    Keyword argument: 
-
-    """
-
-
-def additional_figure_4():
-    """
-    #TODO: Paint and additional figure if needed: Sergey
-    Keyword argument: 
-
-    """
-
-
-def additional_figure_5():
-    """
-    #TODO: Paint and additional figure if needed: Sergey
-    Keyword argument: 
-
-    """
-
-
-def additional_figure_6():
-    """
-    #TODO: Paint and additional figure if needed: Sergey
-    Keyword argument: 
-
-    """
-
-
-def additional_figure_7():
-    """
-    #TODO: Paint and additional figure if needed: Sergey
-    Keyword argument: 
-
-    """
-
-def house(x = 0, y = 0):
-
-    #house
+def house(x=0, y=0):
+    # house
     rectangle(200, 200, '#E4A700', x, y)
     triangle_1(163, 135, '#910000', x + 100, y + 315)
 
-    #window
+    # window
     rectangle(50, 50, '#008ACC', x + 75, y + 75)
     rectangle(62, 6, '#2F1400', x + 69, y + 69)
     rectangle(6, 62, '#2F1400', x + 69, y + 69)
@@ -163,8 +115,7 @@ def house(x = 0, y = 0):
     """
 
 
-
-def sun(x = 0, y = 0):
+def sun(x=0, y=0):
     up()
     setposition(x, y)
     setheading(0)
@@ -189,8 +140,6 @@ def sun(x = 0, y = 0):
 
     end_fill()
 
-
-
     """
     Done: Ilya
     Keyword arguments:
@@ -199,8 +148,7 @@ def sun(x = 0, y = 0):
     """
 
 
-def tree(x = 0 , y = 0):
-
+def tree(x=0, y=0):
     rectangle(30, 150, '#502400', x, y)
     rectangle(200, 175, '#006500', x - 85, y + 150)
     rectangle(50, 15, '#502400', x + 30, y + 100)
@@ -214,8 +162,8 @@ def tree(x = 0 , y = 0):
     y - y coordinate
     """
 
-def flag(x = 0, y = 0):
 
+def flag(x=0, y=0):
     rectangle(5, 175, '#502400', x, y)
     rectangle(20, 20, '#A50021', x + 5, y + 155)
     rectangle(20, 20, '#A50021', x + 5, y + 125)
@@ -231,13 +179,15 @@ def flag(x = 0, y = 0):
     y - y coordinate
     """
 
-def grass(x = 0, y = 0):
+
+def grass(x=0, y=0):
     for i in range(20):
         triangle_1(25, 135, '#006500', x + i * 25 * sqrt(2), y)
 
-def ilya(x = 0, y = 0):
+
+def ilya(x=0, y=0):
     house(x - 100, y)
-    sun(x + 225, y+ 300)
+    sun(x + 225, y + 300)
     tree(x - 400, y)
     grass(x - 450, y + 15)
     flag(x - 225, y)
@@ -249,10 +199,11 @@ def ilya(x = 0, y = 0):
     y - y coordinate
     """
 
+
 def flower():
     """
     Function: painting a flower using only parallelogram function.
-    Keyword argument: 
+    Keyword argument:
     :param x: upper left corner coordinate x
     :param y: upper left corner coordinate y
     :param side_a: length of the first side
@@ -269,7 +220,7 @@ def flower():
     parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, 0)
     parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 90)
     parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 0)
-    parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 0)  
+    parallelogram(0, 0, 75, 100, 135, '#FF4BE8', 1, 0)
     parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, -90)
     parallelogram(0, 0, 75, 100, 135, '#FF99FF', -1, 180)
     parallelogram(0, 75, 100, 100, 90, '#FF3333', 1, 45)
@@ -307,44 +258,64 @@ def flower():
     parallelogram(-100 / sqrt(2), 100 / sqrt(2) + 75, 75, 100, 135, '#FF6666', -1, 90)
 
 
-def picture_6():
+def hexagon_flower():
+    """
+    #TODO: Painting a flower using hexagons: Sergey
+    :return: None
+
+    """
+    colors = ['red', 'green', 'yellow', 'blue', 'purple', 'orange']
+    for t in range(360):
+        pencolor(colors[t % 6])
+        width(t / 100 + 1)
+        forward(t)
+        left(59)
+
+
+def square_flower():
     """
     #TODO: Painting the first picture using functions above: Sergey
-    Keyword argument: 
-
+    :return: None
     """
+    for i in range(500):
+        colors = ['red', 'purple', 'blue', 'green']
+        pencolor(colors[i % 4])
+        forward(i)
+        left(91)
 
 
-def picture_7():
-    """
-    #TODO: Painting the first picture using functions above: Sergey
-    Keyword argument: 
-
-    """
-
-
-
-def picture_8():
+def circle_flower():
     """
     #TODO: Painting the first picture using functions above: Sergey
-    Keyword argument: 
-
+    :return: None
     """
+    for i in range(6):
+        colors = ['red', 'green', 'yellow', 'blue', 'purple', 'orange']
+        begin_fill()
+        fillcolor(colors[i % 6])
+        circle(20)
+        end_fill()
+        left(60)
+
+
+def main():
+    choice = int(input("Type in 1 if you want to see Ilya's functions, 2 if Sergeys: "))
+    if choice == 1:
+        ilya()
+    if choice == 2:
+        flower()
+        reset()
+        circle_flower()
+        reset()
+        speed(15)
+        hexagon_flower()
+        reset()
+        speed(15)
+        square_flower()
 
 
 
-def picture_9():
-    """
-    #TODO: Painting the first picture using functions above: Sergey
-    Keyword argument: 
-
-    """
+if __name__ == '__main__':
+    main()
 
 
-###############################################################################################
-
-speed(0)
-ilya()
-
-
-input('Press ENTER to exit')
